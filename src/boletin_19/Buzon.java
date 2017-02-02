@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public class Buzon {
     
-    private ArrayList<Correo>elBuzon;
+    private ArrayList<Correo>elBuzon = new ArrayList();
     
     
     public Buzon(){
-        elBuzon = new ArrayList<Correo>();
+        
     }
     public void engadeCorreo(Correo c){
         
@@ -24,6 +24,7 @@ public class Buzon {
        
    }
    public boolean porLer(){
+       Correo c = new Correo();
        int nonLidosTotais =0;
    
        boolean lidos = false;
@@ -32,33 +33,40 @@ public class Buzon {
             
             nonLidosTotais++;
         } 
-           else if(nonLidosTotais!=0){
+           else if(elBuzon.get(i).lidoOunon==true){
               lidos=true; 
            }
        }
-       return lidos;
-     
+       System.out.println(" Quedan "+nonLidosTotais+" por ler");
+       
+     return elBuzon.contains(c);
    }
    public int amosarPrimeroNoLido(){
       int pos =0;
-      
+      //probando
        for(int i=0;i<elBuzon.size();i++){
            if(elBuzon.get(i).lidoOunon!=false){
-               pos = (i);
+               pos = elBuzon.indexOf(i);
               
            }
        }
       return pos;  
    } 
  
-  /* public String amosa(int k){
-       
-    elBuzon.add()
-   }
+   public String amosa(int k){
+       Correo correo1 = new Correo();
+       correo1 = elBuzon.get(k-1);
+     if(elBuzon.get(k-1).lidoOunon){
+         elBuzon.get(k).setLidoOunon(true);
+     }
+     return correo1.toString();
+       }
+   
   
    public void elimina(int k){
        
-       elBuzon.remove(k)
- */  
+       elBuzon.remove(k-1);
+  
 
+}
 }
