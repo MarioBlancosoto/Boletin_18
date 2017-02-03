@@ -24,13 +24,13 @@ public class Boletin_18 {
                break;
            case 3: buz.porLer();
                break;
-           case 4: buz.amosarPrimeroNoLido();
+           case 4: System.out.println(buz.amosarPrimeroNoLido());
                break;
-           case 5: buz.amosa(dato.pedirEntero());
+           case 5: System.out.println(buz.amosa(dato.pedirEntero()));
                break;
            case 6: buz.elimina(dato.pedirEntero());
                break;
-           case 7: System.exit(7);
+           case 7: System.exit(select);
        }    
        }while(select!=0);
    

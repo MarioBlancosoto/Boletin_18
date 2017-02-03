@@ -24,24 +24,26 @@ public class Buzon {
        
    }
    public boolean porLer(){
-       Correo c = new Correo();
+     
        int nonLidosTotais =0;
    
        boolean lidos = false;
        for(int i=0;i<elBuzon.size();i++){
-        if(elBuzon.get(i).isLidoOunon()){
+        if(elBuzon.get(i).isLidoOunon()==false){
             
             nonLidosTotais++;
         } 
-           else if(elBuzon.get(i).lidoOunon==true){
+           else{
               lidos=true; 
+              System.out.println(elBuzon.get(i));
            }
        }
        System.out.println(" Quedan "+nonLidosTotais+" por ler");
        
-     return elBuzon.contains(c);
+     return lidos;
    }
-   public int amosarPrimeroNoLido(){
+   public String amosarPrimeroNoLido(){
+       
       int pos =0;
       //probando
        for(int i=0;i<elBuzon.size();i++){
@@ -49,17 +51,16 @@ public class Buzon {
                pos = elBuzon.indexOf(i);
               
            }
-       }
-      return pos;  
+       }System.out.println("la posición es "+pos);
+      return amosa(pos);  
    } 
  
    public String amosa(int k){
-       Correo correo1 = new Correo();
-       correo1 = elBuzon.get(k-1);
-     if(elBuzon.get(k-1).lidoOunon){
-         elBuzon.get(k).setLidoOunon(true);
-     }
-     return correo1.toString();
+       Correo c= new Correo();
+       c = elBuzon.get(k-1);
+     c.setLidoOunon(true);
+     elBuzon.set(k, c);
+     return c.toString();
        }
    
   
