@@ -57,10 +57,13 @@ public class Buzon {
  
    public String amosa(int k){
        Correo c= new Correo();
-       c = elBuzon.get(k-1);
-     c.setLidoOunon(true);
-     elBuzon.set(k, c);
-     return c.toString();
+       c = elBuzon.get(k);
+        if(c.lidoOunon==true){
+            System.out.println(" O correo foi lido ");
+        }else
+       c.setLidoOunon(false);
+       System.out.println(" O correo non foi lido ");
+       return c.toString();
        }
    
   
@@ -68,6 +71,6 @@ public class Buzon {
        
        elBuzon.remove(k-1);
   
-
+       System.out.println(" El correo "+ k+" fue eliminado");
 }
 }
