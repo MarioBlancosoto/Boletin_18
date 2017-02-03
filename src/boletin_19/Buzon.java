@@ -30,10 +30,10 @@ public class Buzon {
        boolean lidos = false;
        for(int i=0;i<elBuzon.size();i++){
         if(elBuzon.get(i).isLidoOunon()==false){
-            
+            lidos=false;
             nonLidosTotais++;
         } 
-           else{
+        else if(elBuzon.get(i).isLidoOunon()==true){
               lidos=true; 
               System.out.println(elBuzon.get(i));
            }
@@ -45,10 +45,10 @@ public class Buzon {
    public String amosarPrimeroNoLido(){
        
       int pos =0;
-      //probando
+      
        for(int i=0;i<elBuzon.size();i++){
            if(elBuzon.get(i).lidoOunon!=false){
-               pos = elBuzon.indexOf(i);
+               pos = i;
               
            }
        }System.out.println("la posición es "+pos);
@@ -61,7 +61,7 @@ public class Buzon {
         if(c.lidoOunon==true){
             System.out.println(" O correo foi lido ");
         }else
-       c.setLidoOunon(false);
+  
        System.out.println(" O correo non foi lido ");
        return c.toString();
        }

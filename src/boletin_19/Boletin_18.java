@@ -18,9 +18,9 @@ public class Boletin_18 {
     
        switch(select){
            
-           case 1: buz.engadeCorreo(new Correo(dato.pedirString(),false));
+           case 1: buz.engadeCorreo(new Correo(dato.pedirString(),dato.pedirBooleano()));
                break;
-           case 2: System.out.println(buz.numeroDeCorreos());
+           case 2: System.out.println("O número de correos totais e "+buz.numeroDeCorreos());
                break;
            case 3: buz.porLer();
                break;

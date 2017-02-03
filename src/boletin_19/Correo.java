@@ -4,7 +4,7 @@ package boletin_19;
 
 public class Correo {
     String contido;
-    boolean lidoOunon = false;
+    boolean lidoOunon ;
 
     
     public Correo(){
@@ -31,6 +31,7 @@ public class Correo {
     public boolean isLidoOunon() {
         return lidoOunon;
     }
+   
 
     @Override
     public String toString() {
