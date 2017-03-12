@@ -7,6 +7,7 @@ public class Boletin_18 {
 
  
     public static void main(String[] args) {
+        String braisEsGay;
         int select;
         Buzon buz = new Buzon();
         Milibreria dato = new  Milibreria();
